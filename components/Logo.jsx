@@ -1,0 +1,1 @@
+export default () => <img src="/static/images/logo.png" alt="logo"/>

@@ -1,0 +1,9 @@
+{
+    "name": "web",
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start"
+    },
+    "license": "MIT"
+}

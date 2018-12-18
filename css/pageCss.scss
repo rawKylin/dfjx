@@ -1,0 +1,9 @@
+$width:'1oo%';
+$maxWidth:'1180px';
+$margin:' 0 auto';
+
+@mixin pageCss{
+    width:$width;
+    max-width:$maxWidth;
+    margin:$margin;
+}

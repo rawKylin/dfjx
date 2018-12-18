@@ -1,0 +1,35 @@
+@import './pageCss.scss';
+$font-size: 24px;
+$display: inline-block;
+$white : #fff;
+$black : #000;
+$bgHover: #366ca0;
+$padding: 10px 20px;
+.dfjxHeader{
+    display: block;
+    // position: fixed;
+    // top:0;
+}
+.headerLink{
+    display:$display;
+    padding:$padding;
+    background-color:$white;
+    color:$black;
+    font-size:$font-size;
+    &:hover{
+        background-color:$bgHover;
+        color:$white;
+    }
+}
+.dfjxFooter{
+    @include pageCss;
+    // position: fixed;
+    // bottom:0;
+    background-color: #0072b9;
+    color:$white;
+    font-size:$font-size/8*5;
+    line-height: $font-size/4*5;
+    div{
+        width: 100%;
+    }
+}
