@@ -1,0 +1,34 @@
+$font-size: 15px;
+$display: inline-block;
+$white : #fff;
+$black : #000;
+$bgHover: #366ca0;
+$padding: 10px 20px;
+.cardBox{
+    display: block;
+    width:370px;
+    height:370px;
+    .cardBoxTitle{
+        padding:$padding;
+        line-height: $font-size/3*8;
+        .cardBoxTitleLeft{
+            display: $display;
+            font-size:$font-size/5*6;
+            font-weight: 600;
+        }
+        .cardBoxTitleRight{
+            display: $display;
+        }
+    }
+    .cardBoxContent{
+        width:100%;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .cardBoxFooter{
+        line-height: $font-size/5*9;
+        padding:$padding;
+    }
+}
