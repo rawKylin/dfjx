@@ -5,5 +5,17 @@
         "build": "next build",
         "start": "next start"
     },
-    "license": "MIT"
+    "description": "东风机械",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rawKylin/dfjx"
+    },
+    "dependencies": {
+        "@zeit/next-sass": "^1.0.1",
+        "next": "^7.0.2",
+        "node-sass": "^4.11.0",
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0"
+    }
 }
