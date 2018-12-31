@@ -12,10 +12,20 @@
         "url": "https://github.com/rawKylin/dfjx"
     },
     "dependencies": {
+        "@material-ui/core": "^3.7.1",
+        "@material-ui/styles": "^3.0.0-alpha.4",
         "@zeit/next-sass": "^1.0.1",
+        "lodash": "^4.17.11",
         "next": "^7.0.2",
+        "jss": "latest",
+        "prop-types": "latest",
         "node-sass": "^4.11.0",
         "react": "^16.7.0",
-        "react-dom": "^16.7.0"
+        "react-dom": "^16.7.0",
+        "react-jss": "^8.1.0",
+        "react-redux": "^5.0.1",
+        "redux": "^3.6.0",
+        "redux-devtools-extension": "^2.13.2",
+        "redux-thunk": "^2.1.0"
     }
 }
