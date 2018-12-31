@@ -1,0 +1,1 @@
+export const window = window ? window : global
