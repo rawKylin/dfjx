@@ -16,15 +16,15 @@ const theme = createMuiTheme({
             dark: '#eee',
         }
     },
-    // typography: {
-    //     useNextVariants: true,
-    // }
+    typography: {
+        useNextVariants: true,
+    }
 })
 
 function createPageContext(){
     return {
         theme,
-        // sheetsManger: new Map(),
+        sheetsManger: new Map(),
         sheetsRegistry: new SheetsRegistry(),
         generateClassName: createGenerateClassName(),
     }

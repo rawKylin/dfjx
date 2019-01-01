@@ -29,7 +29,7 @@ class DFJXApp extends App{
                     <Head>
                         <title>东风机械</title>
                     </Head>
-                    <JssProvider registry={this.pageContext.sheetsRegistry}>
+                    <JssProvider registry={this.pageContext.sheetsRegistry} sheetsManger={this.pageContext.sheetsManger} >
                         <MuiThemeProvider theme={this.pageContext.theme} >
                         {/* sheetsManger={this.pageContext.sheetsManger} */}
                             <CssBaseline />

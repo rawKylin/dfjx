@@ -3,6 +3,6 @@ import Header from '../components/Header'
 const About = () => (
     <div>
         <Header />
-        i love you</div>
+        东风机械</div>
 )
 export default About
