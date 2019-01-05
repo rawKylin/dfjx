@@ -3,6 +3,8 @@ import Head from 'next/head'
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import JssProvider from 'react-jss/lib/JssProvider'
+import withWidth from '@material-ui/core/withWidth';//屏幕宽度xs小于600px，适配手机端
+
 import getPageContext from '../src/getPageContext'
 import React from 'react'
 import widthReduxStore from '../lib/with-redux-store'
@@ -33,7 +35,7 @@ class DFJXApp extends App{
                         <MuiThemeProvider theme={this.pageContext.theme} >
                         {/* sheetsManger={this.pageContext.sheetsManger} */}
                             <CssBaseline />
-                            <Component pageContext={this.pageContext} {...pageProps} />
+                            <Component pageContext={this.pageContext} {...pageProps} width={this.props.width}/>
                         </MuiThemeProvider>
                     </JssProvider>  
                     </div>          
@@ -44,4 +46,4 @@ class DFJXApp extends App{
     }
 }
 
-export default widthReduxStore(DFJXApp)
+export default withWidth()(widthReduxStore(DFJXApp))
