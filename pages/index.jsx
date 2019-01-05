@@ -1,62 +1,19 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { viewChange } from '../store'
-import ReduxHandler from '../components/reduxHandler'
+import Layout from '../components/Layout'
+import React,{ Component } from 'react';
+import Card from '../components/Card'
 
-import PropTypes from 'prop-types'
-import Button from '@material-ui/core/Button'
-import { withStyles } from '@material-ui/core/styles'
-
-const styles = theme =>({
-    root: {
-        textAlign: 'left',
-        // paddingTop: theme.spacing.unit * 20,
+class About extends Component{
+    constructor(props){
+        super(props)
     }
-})
-
-// import {window} from '../utils/window'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import '../css/normalize.css'
-import '../css/reset.css'
-
-class Index extends React.Component{
-   
-    static getInitialProps({reduxStore,req}){
-        const isPc = !!req ? 'pc':'h5'
-        reduxStore.dispatch(viewChange(isPc))
-        return {}
-    }
-    
-    state = {
-        open: false,
-    }
-    
-    componentDidMount(){
-        
-    }
-
-    componentWillUnmount(){
-
-    }
-
     render(){
-        const { classes } = this.props
-        const { open } = this.state
         return (
-            <div className={classes.root} >
-                
-                <Header></Header>
-                {/* <Button color="primary" onClick={this.handleClick}>click me</Button> */}
-                <ReduxHandler></ReduxHandler>
-                <Footer></Footer>
-            </div>
-
+        
+        <Layout {...this.props} >
+            <Card title='公司简介' moreLink='/' footer='巩义市东风机械厂建于1984年，位于河南省巩义市回郭镇人民路，是集设计、生产、销售、服务为一体的机械产品专业厂家。铁路高速公路国道交叉通过，交通便利'></Card>
+        </Layout>
         )
     }
 }
-Index.propTypes = {
-    classes: PropTypes.object.isRequired
-}
 
-export default withStyles(styles)(Index)
+export default About

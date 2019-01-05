@@ -12,9 +12,9 @@ class Cardbox extends React.Component{
         return (
             <div className={componentCss.cardBox}>
                 <div className={componentCss.cardBoxTitle}>
-                    <div className={componentCss.cardBoxTitleLeft}>this.state.title</div>
+                    <div className={componentCss.cardBoxTitleLeft}>{this.state.title}</div>
                     {this.state.moreLink?<div className={componentCss.cardBoxTitleRight}>
-                        <Link href={this.state.moreLink}>更多></Link>
+                        <Link href={this.state.moreLink}><span>更多></span></Link>
                     </div>:''}
                 </div>
                 <div className={componentCss.cardBoxContent}>

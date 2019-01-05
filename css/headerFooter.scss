@@ -1,7 +1,7 @@
 @import './pageCss.scss';
 $font-size: 24px;
 $display: inline-block;
-$white : #fff;
+$noHover : #fff;
 $black : #000;
 $bgHover: #366ca0;
 $padding: 10px 20px;
@@ -9,16 +9,18 @@ $padding: 10px 20px;
     display: block;
     position: fixed;
     top:0;
+    padding:20px;
 }
 .headerLink{
     display:$display;
     padding:$padding;
-    background-color:$white;
+    background-color:$noHover;
     color:$black;
     font-size:$font-size;
+    font-weight: 700;
     &:hover{
         background-color:$bgHover;
-        color:$white;
+        color:$noHover;
     }
 }
 .dfjxFooter{
@@ -27,7 +29,7 @@ $padding: 10px 20px;
     width:100%;
     bottom:0;
     background-color: #0072b9;
-    color:$white;
+    color:$noHover;
     padding:10px 50px;
 
     font-size:$font-size/8*5;

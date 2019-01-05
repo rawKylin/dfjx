@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { viewChange } from '../../store'
+import { withStyles } from '@material-ui/core/styles'
 
 class ChangeView extends Component{
     constructor(props){
