@@ -11,8 +11,10 @@ import widthReduxStore from '../lib/with-redux-store'
 import { Provider } from 'react-redux'
 
 class DFJXApp extends App{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+        console.log(props,333333);
+        
         this.pageContext = getPageContext()
     }
     componentDidMount(){

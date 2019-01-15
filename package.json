@@ -14,18 +14,21 @@
     "dependencies": {
         "@material-ui/core": "^3.7.1",
         "@material-ui/styles": "^3.0.0-alpha.4",
+        "@types/swiper": "^4.4.1",
         "@zeit/next-sass": "^1.0.1",
+        "axios": "^0.18.0",
+        "jss": "latest",
         "lodash": "^4.17.11",
         "next": "^7.0.2",
-        "jss": "latest",
-        "prop-types": "latest",
         "node-sass": "^4.11.0",
+        "prop-types": "latest",
         "react": "^16.7.0",
         "react-dom": "^16.7.0",
         "react-jss": "^8.1.0",
         "react-redux": "^5.0.1",
         "redux": "^3.6.0",
         "redux-devtools-extension": "^2.13.2",
-        "redux-thunk": "^2.1.0"
+        "redux-thunk": "^2.1.0",
+        "swiper": "^4.4.6"
     }
 }

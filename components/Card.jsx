@@ -18,7 +18,7 @@ class Cardbox extends React.Component{
                     </div>:''}
                 </div>
                 <div className={componentCss.cardBoxContent}>
-                    <img src={this.state.contentImg?this.state.contentImg:'/static/images/logo.png'} alt={this.state.contentImgAlt?this.state.contentImgAlt:'东风机械'}/>
+                    <img src={this.state.contentImg?this.state.contentImg:'/static/images/logo.jpg'} alt={this.state.contentImgAlt?this.state.contentImgAlt:'东风机械'}/>
                 </div>
                 <div className={componentCss.cardBoxFooter}>
                     {this.state.footer}
