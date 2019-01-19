@@ -11,10 +11,12 @@ const styles = theme =>({
         // paddingTop: theme.spacing.unit * 20,
     },
     content:{
-        height:document.body.clientHeihgt-400,
+        // height:parseFloat(document.body.clientHeihgt)-200,
         // overflow:'scroll',
-        position:'relative',
-        top:150
+        // position:'relative',
+        // top:150,
+        // margin:'150px auto',
+        // backgroundColor:'#fff'
     }
 })
 

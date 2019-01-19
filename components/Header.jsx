@@ -17,11 +17,15 @@ const borderStyle = {
 }
 
 const LinkArr = (LinkItem)=>(
-    <Link href={LinkItem.href} key={LinkItem.title}><a  className={headerFooter.headerLink}>{LinkItem.title}</a></Link>
+    <Link href={LinkItem.href} key={LinkItem.title}><div  className={headerFooter.headerLink}>{LinkItem.title} {LinkItem.childLink?<div className={headerFooter.childLink}>{LinkItem.childLink.map(item => LinkArr(item))}</div>:''}</div></Link>
 )
 const linkArray = [
     {href:'/',title:'首页'},
     {href:'/about',title:'关于我们'},
+    {href:'/productAll',title:'产品中心',childLink:[
+        {href:'/',title:'首页'},
+        {href:'/about',title:'关于我们'},
+    ]},
 ]
 const Header = (props) => (
     <div className={headerFooter.dfjxHeader}>

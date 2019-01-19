@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import Document, { Head, Main, NextScript } from 'next/document'
 import flush from 'styled-jsx/server'
 
+const bf = {
+    background:'#fff'
+}
 class DFJXDocument extends Document{
     render(){
         const { pageContext } = this.props;
@@ -14,7 +17,7 @@ class DFJXDocument extends Document{
                     <meta name="theme-color" content={pageContext ? pageContext.theme.palette.primary.main : null} />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
                 </Head>
-                <body>
+                <body style={bf}>
                     <Main />
                     <NextScript />
                 </body>

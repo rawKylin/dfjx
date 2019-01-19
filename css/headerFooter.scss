@@ -7,21 +7,41 @@ $bgHover: #366ca0;
 $padding: 10px 20px;
 .dfjxHeader{
     display: block;
-    position: fixed;
-    top:0;
+    // position: fixed;
+    // top:0;
     padding:20px;
 }
 .headerLink{
     display:$display;
     padding:$padding;
     background-color:$noHover;
+    position: relative;
     color:$black;
     font-size:$font-size;
     font-weight: 700;
     &:hover{
         background-color:$bgHover;
         color:$noHover;
+        cursor: pointer;
+        .childLink{
+            display: block;
+            position: absolute;
+            top:44px;
+            left: 0;
+            width: 100%;
+            z-index: 7;
+            .headerLink{
+                border:1px solid #eee;
+                display: block;
+                font-size:$font-size/3*2;
+                font-weight: normal;
+            }
+        }
     }
+}
+.childLink{
+    display: none;
+   
 }
 .dfjxFooter{
     @include pageCss;
