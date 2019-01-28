@@ -15,7 +15,7 @@ const styles = theme =>({
         // overflow:'scroll',
         // position:'relative',
         // top:150,
-        // margin:'150px auto',
+        margin:'0 auto 110px',
         // backgroundColor:'#fff'
     }
 })

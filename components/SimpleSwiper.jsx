@@ -16,33 +16,39 @@ const demoImg={
 }
 const ib = {
     display:'inline-block',
-    width:'720px',
+    width:'750px',
     margin:'0 auto'
 }
 const demo = {
-    width:'720px',
+    width:'750px',
     margin:'0 auto',
     overflow:'hidden'
 }
 class SimpleSwiper extends Component{
     constructor(props){
         super(props)
+        // let mySwiper;
         
         this.state = {
             swiperId : `swiperId${+(new Date())}`,
-            paginteId : `paginteId${+(new Date())}`
+            paginteId : `paginteId${+(new Date())}`,
+            mySwiper:''
         }
     }
     
     componentDidMount(){
         
-        var mySwiper = new Swiper(this.state.swiperId,{
+        this.setState({mySwiper : new Swiper(this.state.swiperId,{
             pagination:{
                 el:this.state.paginteId
             },
             observer: true,
             autoplay:true,
         })
+    })
+    }
+    componentWillUnmount(){
+        this.state.mySwiper.destroy(false)
     }
     render(){
        
@@ -50,7 +56,7 @@ class SimpleSwiper extends Component{
             
             <div className="wxchat-banner">
                 <section className="new_custom swiper-container index_tab_con" style={demo}  ref={self => this.state.swiperId = self}>
-                    <ul className="swiper-wrapper" style={demoCss} style={{width:this.props.list.length*720}} >
+                    <ul className="swiper-wrapper" style={demoCss} style={{width:this.props.list.length*750}} >
                         {this.props.list.map(item=>{
                             return <li className="swiper-slide" style={ib} key={item}><img src={item} alt="东风机械" style={demoImg}/></li>
                         })}

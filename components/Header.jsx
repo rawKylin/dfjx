@@ -21,11 +21,14 @@ const LinkArr = (LinkItem)=>(
 )
 const linkArray = [
     {href:'/',title:'首页'},
-    {href:'/about',title:'关于我们'},
+    {href:'/about',title:'公司概况'},
     {href:'/productAll',title:'产品中心',childLink:[
         {href:'/',title:'首页'},
         {href:'/about',title:'关于我们'},
     ]},
+    {href:'/company',title:'企业文化'},
+    {href:'/linkUs',title:'联系我们'},
+
 ]
 const Header = (props) => (
     <div className={headerFooter.dfjxHeader}>

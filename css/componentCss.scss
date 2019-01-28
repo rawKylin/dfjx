@@ -4,11 +4,24 @@ $white : #fff;
 $black : #000;
 $bgHover: #366ca0;
 $padding: 10px 20px;
+// .container{
+//     flex:1;
+//     justify-content: space-around;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     // position: relative;
+// }
 .cardBox{
     display: inline-block;
+    // position: absolute;
+    // left:50%;
+    // transform: translate(-50%,0);
+    // flex:1;
     width:370px;
     height:370px;
     overflow: hidden;
+    margin:0 auto;
+    text-align: center;
     padding:10px;
     .cardBoxTitle{
         padding:$padding;
@@ -63,6 +76,20 @@ $padding: 10px 20px;
         .aboutContentRight{
             flex: 2;
             font-size: $font-size/5*6;
+            dl{
+                max-width:300px;
+                dt{
+                    font-weight: 700;
+                    height: $font-size/5*9;
+                    line-height: $font-size/5*9;
+                    
+                }
+                
+            }
         }
     }
+}
+.mapContainer{
+    width:450px;
+    height:280px;
 }

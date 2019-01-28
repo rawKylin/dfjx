@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import componentCss from '../css/componentCss.scss'
+import classsNames from 'classnames'
 class Cardbox extends React.Component{
     constructor(props){
         super(props)
@@ -18,7 +19,8 @@ class Cardbox extends React.Component{
     }
     render(){
         return (
-            <div className={componentCss.cardBox}>
+            // <div className={componentCss.container}>
+                <div className={componentCss.cardBox}>
                 <div className={componentCss.cardBoxTitle}>
                     <div className={componentCss.cardBoxTitleLeft}>{this.props.title}</div>
                     {this.props.moreLink?<div className={componentCss.cardBoxTitleRight}>
@@ -32,6 +34,8 @@ class Cardbox extends React.Component{
                     {this.props.footer}
                 </div>
             </div>
+            // </div>
+            
         )
     }
 }
