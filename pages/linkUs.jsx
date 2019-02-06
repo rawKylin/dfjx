@@ -1,5 +1,7 @@
 import Layout from '../components/Layout'
 import React,{ Component } from 'react';
+import { connect } from 'react-redux'
+
 import componentCss from '../css/componentCss.scss'
 import SimpleMap from '../components/SimpleMap'
 
@@ -11,6 +13,9 @@ const lineHeight = {
 class About extends Component{
     constructor(props){
         super(props)
+        // store
+        console.log(props,1111111);
+        
     }
     render(){
         return (
@@ -35,5 +40,8 @@ class About extends Component{
         )
     }
 }
-
-export default About
+function mapStateToProps(state){
+    const { productInfo } = state
+    return { productInfo }
+}
+export default connect(mapStateToProps)(About)

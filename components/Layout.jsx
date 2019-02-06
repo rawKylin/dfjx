@@ -1,6 +1,9 @@
 import React from 'react'
-import { viewChange } from '../store'
+import { connect } from 'react-redux'
+
+import { viewChange, productGet } from '../store'
 import ReduxHandler from '../components/reduxHandler'
+import axios from 'axios'
 
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
@@ -28,18 +31,39 @@ import '../css/reset.css'
 
 class Layout extends React.Component{
    
-    static getInitialProps({reduxStore,req}){
-        const isPc = !!req ? 'pc':'h5'
-        reduxStore.dispatch(viewChange(isPc))
-        return {}
+    // static getInitialProps({reduxStore,req}){
+    //     const isPc = !!req ? 'pc':'h5'
+    //     reduxStore.dispatch(viewChange(isPc))
+    //     console.log(12312);
+        
+    //     axios.get('/static/json/product.json').then(res=>{
+    //         console.log(res,'info1');
+            
+    //         reduxStore.dispatch(productGet(res))
+    //     })
+    //     return {}
+    // }
+    constructor(props){
+        super(props)
+        this.changeit = this.changeit.bind(this)
     }
-    
     state = {
         open: false,
+        info: []
     }
-    
+    changeit = () => {
+        
+        const { dispatch } = this.props
+        axios.get('/static/json/product.json').then(res=>{
+            console.log(res,'info1');
+            // this.setState({info:res.data})
+            dispatch(productGet(res.data))
+        })
+    }
     componentDidMount(){
         
+        this.changeit()
+
     }
 
     componentWillUnmount(){
@@ -50,7 +74,6 @@ class Layout extends React.Component{
         const { classes } = this.props
         const { open } = this.state
         const contentComponent = this.props.contentComponent ? this.props.contentComponent : null
-        console.log(contentComponent);
         
         return (
             <div  className={classes.root}>
@@ -72,5 +95,8 @@ Layout.propTypes = {
     classes: PropTypes.object.isRequired,
     width:PropTypes.string.isRequired,
 }
-
-export default withStyles(styles)(Layout)
+function mapStateToProps(state){
+    const { info } = state
+    return { info }
+}
+export default connect(mapStateToProps)(withStyles(styles)(Layout))

@@ -1,0 +1,27 @@
+$width:'1oo%';
+$maxWidth:'1180px';
+$margin:' 0 auto';
+$fontSize: 15px;
+.anchor{
+    padding-left:20px;
+    font-size: $fontSize;
+}
+.productAllCss{
+    padding: 10px 20px;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    // flex-wrap: wrap;
+    .productCard{
+        // flex:1;
+        width:210px;
+        padding: 10px;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 10px;
+        img{
+            width:100%;
+            
+        }
+    }
+}

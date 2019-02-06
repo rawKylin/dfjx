@@ -15,8 +15,7 @@ class About extends Component{
         this.state = {}
     }
     componentDidMount(){
-        axios.get('/static/product/index.json').then(res=>{
-            console.log(res,11111);
+        axios.get('/static/json/index.json').then(res=>{
             if(res.data){
                 this.setState({...res.data})
                 // this.state = {...res.data}

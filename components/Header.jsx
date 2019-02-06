@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { connect } from 'react-redux'
 import headerFooter from '../css/headerFooter.scss'
 const logoStyle = {
     height:'50px',
@@ -44,4 +45,8 @@ const Header = (props) => (
         </div>
     </div>
 )
-export default Header
+function mapStateToProps(state){
+    const { productInfo } = state
+    return { productInfo }
+}
+export default connect(mapStateToProps)(Header)

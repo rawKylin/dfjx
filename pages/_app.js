@@ -13,7 +13,6 @@ import { Provider } from 'react-redux'
 class DFJXApp extends App{
     constructor(props){
         super(props)
-        console.log(props,333333);
         
         this.pageContext = getPageContext()
     }

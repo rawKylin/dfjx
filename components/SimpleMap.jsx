@@ -28,13 +28,10 @@ class SimpleMap extends Component{
         this.state.myMap.infoWindow = new AMap.InfoWindow({
             isCustom: true,  //使用自定义窗体
             content: '东风机械厂',
-            offset: new AMap.Pixel(16, -45)
+            offset: new AMap.Pixel(16, -25)
         });
         this.state.myMap.infoWindow.open(this.state.myMap.map, this.state.myMap.marker.getPosition());
-        // this.state.infoWindow = new BMap.InfoWindow("地址：河南省巩义市回郭镇人民路190号", opts);  // 创建信息窗口对象 
-        // this.state.marker.addEventListener("click", function(){          
-        //     map.openInfoWindow(this.state.infoWindow,this.state.point); //开启信息窗口
-        // });
+       
     }
     componentWillUnmount(){
         this.state.myMap.map && this.state.myMap.map.destroy();
