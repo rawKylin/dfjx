@@ -7,7 +7,7 @@ import axios from 'axios'
 const card = {
     display:'flex',
     flexWrap:'wrap',
-    justifyContent:'space-around'
+    justifyContent:'center'
 }
 class About extends Component{
     constructor(props){
@@ -30,7 +30,7 @@ class About extends Component{
             {this.state.imgList?<SimpleSwiper list={this.state.imgList}></SimpleSwiper>:''}
             <div style={card}>
                 <Card title='公司概况' moreLink='/about' contentImg="./static/images/house.jpg" footer='巩义市东风机械厂建于1984年，位于河南省巩义市回郭镇人民路，是集设计、生产、销售、服务为一体的机械产品专业厂家。铁路高速公路国道交叉通过，交通便利'></Card>
-                <Card title='新闻中心' moreLink='/' contentImg="./static/images/news.jpg" footer='东风机械厂以质量创声誉，以态度赢人心'></Card>
+                <Card title='新闻中心' moreLink='/' contentImg="./static/images/newCenter.png" footer='东风机械厂以质量创声誉，以态度赢人心'></Card>
                 <Card title='产品中心' moreLink='/' contentImg="./static/images/news.jpg" footer='东风机械厂以质量创声誉，以态度赢人心'></Card>
             </div>
            

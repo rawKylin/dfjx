@@ -12,7 +12,7 @@ $padding: 10px 20px;
 //     // position: relative;
 // }
 .cardBox{
-    display: inline-block;
+    // display: inline-block;
     // position: absolute;
     // left:50%;
     // transform: translate(-50%,0);
@@ -20,7 +20,7 @@ $padding: 10px 20px;
     width:370px;
     height:370px;
     overflow: hidden;
-    margin:0 auto;
+    // margin:0 auto;
     text-align: center;
     padding:10px;
     .cardBoxTitle{
@@ -64,8 +64,8 @@ $padding: 10px 20px;
         padding:10px;
     }
     .aboutContent{
-    display: flex;
-
+        display: flex;
+        align-items: center;
         .aboutContentLeft{
             flex:2;
             margin-right: 20px;

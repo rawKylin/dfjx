@@ -25,6 +25,7 @@ export const viewChange = (cv) => dispatch => {
     return dispatch({type:actionTypes.CHANGEVIEW,cv})
 }
 export const productGet = (info) => dispatch => {
+    
     return dispatch({type:actionTypes.GETPRODUCT,info})
 }
 export function initializeStore(initialState = dfjxInitialState){

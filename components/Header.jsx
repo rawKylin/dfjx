@@ -23,12 +23,16 @@ const LinkArr = (LinkItem)=>(
 const linkArray = [
     {href:'/',title:'首页'},
     {href:'/about',title:'公司概况'},
-    {href:'/productAll',title:'产品中心',childLink:[
-        {href:'/',title:'首页'},
-        {href:'/about',title:'关于我们'},
-    ]},
     {href:'/company',title:'企业文化'},
     {href:'/linkUs',title:'联系我们'},
+    {href:'/productAll',title:'产品中心',childLink:[
+        {href:'/productAll#clj',title:'成缆机'},
+        {href:'/productAll#hgj',title:'合股机'},
+        {href:'/productAll#klj',title:'框缆机'},
+        {href:'/productAll#frj',title:'复绕机'},
+        {href:'/productAll',title:'更多'},
+    ]},
+   
 
 ]
 const Header = (props) => (

@@ -2,24 +2,23 @@ import React, { Component } from 'react'
 import Swiper from 'swiper'
 
 import  'swiper/dist/css/swiper.min.css'
-import { log } from 'util';
-const demoCss = {
+const simpleContentCss = {
     // height:'50px',
     // width:'1500px',
     marginBottom:'10px',
     overflow:'hidden'
 }
-const demoImg={
+const simpleContentImg={
     width:'100%',
     height:'100%',
-    maxHeight:300
+    // maxHeight:300
 }
 const ib = {
     display:'inline-block',
     width:'750px',
     margin:'0 auto'
 }
-const demo = {
+const simpleContent = {
     width:'750px',
     margin:'0 auto',
     overflow:'hidden'
@@ -51,14 +50,15 @@ class SimpleSwiper extends Component{
         this.state.mySwiper.destroy(false)
     }
     render(){
+        const imgPath = './static/images/'
        
         return (
             
-            <div className="wxchat-banner">
-                <section className="new_custom swiper-container index_tab_con" style={demo}  ref={self => this.state.swiperId = self}>
-                    <ul className="swiper-wrapper" style={demoCss} style={{width:this.props.list.length*750}} >
+            <div>
+                <section className="swiper-container" style={simpleContent}  ref={self => this.state.swiperId = self}>
+                    <ul className="swiper-wrapper" style={simpleContentCss} style={{width:this.props.list.length*750}} >
                         {this.props.list.map(item=>{
-                            return <li className="swiper-slide" style={ib} key={item}><img src={item} alt="东风机械" style={demoImg}/></li>
+                            return <li className="swiper-slide" style={ib} key={item}><img src={imgPath+item} alt="东风机械" style={simpleContentImg}/></li>
                         })}
                     </ul>
                     <div className="swiper-pagination banner-pagination"  ref={self => this.state.paginateId = self}></div>

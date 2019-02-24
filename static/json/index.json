@@ -1,5 +1,5 @@
 {
   "name":"东风机械",
   "des":"机械类厂商",
-  "imgList":["./static/images/indexSwiper1.jpg","./static/images/indexSwiper2.png"]
+  "imgList":["indexSwiper1.jpg","indexSwiper2.png"]
 }

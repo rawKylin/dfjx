@@ -34,10 +34,8 @@ class Layout extends React.Component{
     // static getInitialProps({reduxStore,req}){
     //     const isPc = !!req ? 'pc':'h5'
     //     reduxStore.dispatch(viewChange(isPc))
-    //     console.log(12312);
         
     //     axios.get('/static/json/product.json').then(res=>{
-    //         console.log(res,'info1');
             
     //         reduxStore.dispatch(productGet(res))
     //     })
@@ -55,7 +53,6 @@ class Layout extends React.Component{
         
         const { dispatch } = this.props
         axios.get('/static/json/product.json').then(res=>{
-            console.log(res,'info1');
             // this.setState({info:res.data})
             dispatch(productGet(res.data))
         })
